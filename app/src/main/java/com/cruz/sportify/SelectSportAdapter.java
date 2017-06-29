@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Acer on 28/06/2017.
  */
@@ -24,6 +26,10 @@ public class SelectSportAdapter extends RecyclerView.Adapter<SelectSportAdapter.
             R.drawable.cat_inactive_lawn_tennis,
             R.drawable.cat_inactive_golf
     };
+    private ArrayList<String> sportsPreference;
+    protected String sport = null;
+    String [] sports = {};
+
 
     @Override
     public SelectSportAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,7 +55,8 @@ public class SelectSportAdapter extends RecyclerView.Adapter<SelectSportAdapter.
 
         public ViewHolder(View itemView){
             super(itemView);
-            sportImg = itemView.findViewById(R.id.sportImg);
+            sportsPreference = new ArrayList<>();
+            sportImg = (ImageView) itemView.findViewById(R.id.sportImg);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
