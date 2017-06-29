@@ -1,10 +1,12 @@
-package com.cruz.sportify;
+package com.cruz.sportify.LoginRegistration;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.cruz.sportify.R;
 
 public class LoginActivity extends AppCompatActivity {
 
