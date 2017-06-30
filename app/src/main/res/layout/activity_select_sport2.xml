@@ -11,6 +11,7 @@
     android:weightSum="1">
 
     <TextView
+        android:id="@+id/label"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="15dp"
         android:paddingLeft="10dp"
@@ -29,17 +30,20 @@
         android:layout_height="490dp">
 
         <LinearLayout
+            android:id="@+id/lin1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/lin2"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2">
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/basketCard"
                     app:cardBackgroundColor="#000"
                     android:layout_width="fill_parent"
                     android:layout_height="110dp"
@@ -53,7 +57,7 @@
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
                         android:src="@drawable/cat_inactive_basketball"
-                        android:onClick="onClick"/>
+                        android:onClick="onClick" />
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
