@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.cruz.sportify.LoginRegistration.*;
 import com.cruz.sportify.R;
+
 
 public class SelectFrequencyActivity extends AppCompatActivity implements View.OnClickListener {
 

@@ -7,17 +7,21 @@ import java.util.ArrayList;
  */
 
 public class SportsPreference {
-    private ArrayList<String> sportsPref;
+    private String prefSport;
 
-    public SportsPreference(ArrayList<String> sportsPref) {
-        this.sportsPref = sportsPref;
+    public SportsPreference(){
+
     }
 
-    public ArrayList<String> getSportsPref() {
-        return sportsPref;
+    public SportsPreference(String prefSport) {
+        this.prefSport = prefSport;
     }
 
-    public void setSportsPref(ArrayList<String> sportsPref) {
-        this.sportsPref = sportsPref;
+    public String getPrefSport() {
+        return prefSport;
+    }
+
+    public void setPrefSport(String prefSport) {
+        this.prefSport = prefSport;
     }
 }

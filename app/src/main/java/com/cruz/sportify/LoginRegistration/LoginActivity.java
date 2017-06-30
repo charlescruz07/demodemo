@@ -1,4 +1,4 @@
-package com.cruz.sportify;
+package com.cruz.sportify.LoginRegistration;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.cruz.sportify.LoginRegistration.SelectSportActivity;
+import com.cruz.sportify.LoginRegistration.*;
+import com.cruz.sportify.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -112,6 +115,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     onSignedInInitialize(firebaseUser.getDisplayName());
                     Intent intent = new Intent(LoginActivity.this,SelectSportActivity.class);
                     intent.putExtra("studentName",firebaseUser.getDisplayName());
+                    intent.putExtra("uID",firebaseUser.getUid());
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(),"Welcome "+firebaseUser.getDisplayName()+"!",Toast.LENGTH_SHORT).show();
                 }else{
