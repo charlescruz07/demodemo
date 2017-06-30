@@ -10,6 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cruz.sportify.R;
 
@@ -18,6 +22,7 @@ public class SelectSportActivity extends AppCompatActivity implements View.OnCli
     private Button nextBtn;
     private ImageView basketImg,badmintonImg,volleyballImg,soccerImg,pingpongImg,bowlingImg,tennisImg,golfImg;
     boolean isActive = false;
+    private CardView basketCard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,46 @@ public class SelectSportActivity extends AppCompatActivity implements View.OnCli
         bowlingImg = (ImageView) findViewById(R.id.bowlingImg);
         tennisImg = (ImageView) findViewById(R.id.tennisImg);
         golfImg = (ImageView) findViewById(R.id.golfImg);
+
+        basketCard = (CardView) findViewById(R.id.basketCard);
+
+        basketCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("kobe","ni sud sa card");
+                if(basketImg.getDrawable().getConstantState().equals(getResources().getDrawable(R.drawable.cat_inactive_basketball).getConstantState())){
+                    basketImg.setImageResource(R.drawable.cat_selected_basketball);
+                }else {
+                    basketImg.setImageResource(R.drawable.cat_inactive_basketball);
+                }
+            }
+        });
+
+        ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
+
+        scrollView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("mycoh", "ni click");
+            }
+        });
+
+        LinearLayout lin1 = (LinearLayout) findViewById(R.id.lin1);
+        LinearLayout lin2 = (LinearLayout) findViewById(R.id.lin2);
+
+        lin1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("regs", "na click ang lin1");
+            }
+        });
+
+        lin2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("regs", "ni click ang lin2");
+            }
+        });
 
         nextBtn = (Button) findViewById(R.id.nextBtn);
         nextBtn.setOnClickListener(new View.OnClickListener() {
